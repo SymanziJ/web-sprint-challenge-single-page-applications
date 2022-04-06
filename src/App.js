@@ -1,3 +1,5 @@
+import './App.css';
+
 import React from "react";
 import { Route, Link, Switch} from 'react-router-dom';
 
@@ -6,12 +8,12 @@ import PizzaForm from './components/PizzaForm';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <nav>
         <h2>Lambda Eats</h2>
-        <div>
-          <Link to="/" id="order-pizza">Home</Link>
-          <Link to="/pizza">Order</Link>
+        <div className='links'>
+          <Link to="/">Home</Link>
+          <Link to="/pizza" id="order-pizza">Order</Link>
         </div>
       </nav>
 
