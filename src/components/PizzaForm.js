@@ -6,7 +6,7 @@ export default function PizzaForm(props) {
         values,
         submit,
         change,
-        //disabled,
+        disabled,
         errors,
     } = props;
 
@@ -48,9 +48,9 @@ export default function PizzaForm(props) {
                 <label>Size
                     <select id="size-dropdown" value={values.size} name="size" onChange={onChange}>
                         <option value="">- Select a Size -</option>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                     </select>
                 </label>
                 {/* ----- TOPPINGS CHECKLIST ----- */}
@@ -101,7 +101,7 @@ export default function PizzaForm(props) {
             </div>
             {/* ----- SUBMIT BUTTON ----- */}
             <div className='form-submit'>
-                <button id='order-button'>Place Order</button>
+                <button id='order-button' disabled={disabled}>Place Order</button>
             </div>
         </form>
         
